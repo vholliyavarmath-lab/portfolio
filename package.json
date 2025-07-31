@@ -1,0 +1,25 @@
+{
+  "name": "vinayak-mechanical-portfolio",
+  "version": "1.0.0",
+  "description": "Vinayak Holliyavarmath's Mechanical Engineering Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build required'",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "mechanical-engineering",
+    "responsive",
+    "animation"
+  ],
+  "author": "Vinayak Holliyavarmath",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
