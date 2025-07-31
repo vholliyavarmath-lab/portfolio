@@ -138,6 +138,7 @@ body {
     line-height: 1.1;
     white-space: nowrap;
     overflow: hidden;
+    animation: slideInUp 1.2s ease-out 0.5s both;
 }
 
 .title-line {
