@@ -142,15 +142,35 @@ body {
 
 .title-line {
     display: inline;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff, #5f27cd);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: typewriter 3s steps(20) 1s forwards, blink 0.75s step-end infinite;
+    animation: typewriter 3s steps(20) 1s forwards, blink 0.75s step-end infinite, aurora 8s ease-in-out infinite;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #2563eb;
+    border-right: 3px solid transparent;
     width: 0;
+    position: relative;
+}
+
+.title-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff, #5f27cd);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: aurora 8s ease-in-out infinite;
+    opacity: 0.7;
+    filter: blur(2px);
+    z-index: -1;
 }
 
 .title-line:nth-child(2) {
@@ -846,7 +866,25 @@ section {
         border-color: transparent;
     }
     50% {
-        border-color: #2563eb;
+        border-color: #ff6b6b;
+    }
+}
+
+@keyframes aurora {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
