@@ -148,11 +148,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: typewriter 3s steps(20) 1s forwards, blink 0.75s step-end infinite, aurora 8s ease-in-out infinite;
+    animation: aurora 8s ease-in-out infinite;
     white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid transparent;
-    width: 0;
     position: relative;
 }
 
@@ -853,23 +850,7 @@ section {
     }
 }
 
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
 
-@keyframes blink {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #ff6b6b;
-    }
-}
 
 @keyframes aurora {
     0% {
