@@ -136,8 +136,6 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.1;
-    white-space: nowrap;
-    overflow: hidden;
     animation: slideInUp 1.2s ease-out 0.5s both;
 }
 
@@ -149,7 +147,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: aurora 8s ease-in-out infinite;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -910,8 +907,6 @@ section {
 
     .hero-title {
         font-size: 2.5rem;
-        white-space: nowrap;
-        overflow: hidden;
     }
 
     .hero-buttons {
@@ -959,9 +954,15 @@ section {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
-        white-space: nowrap;
-        overflow: hidden;
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
     }
 
     .section-title {
@@ -974,6 +975,20 @@ section {
 
     .hero-container {
         padding: 0 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
     }
 }
 
