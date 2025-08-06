@@ -334,25 +334,33 @@ const galleryData = {
             { src: 'images/drone-spraying-1.jpg.png', alt: 'Drone spraying mechanism design' },
             { src: 'images/drone-spraying-2.jpg.png', alt: '2-DOF pan-tilt system' },
             { src: 'images/drone-spraying-3.jpg.png', alt: 'Motorized actuators integration' },
-            { src: 'images/drone-spraying-4.jpg.png', alt: 'Testing and validation' }
+            { src: 'images/drone-spraying-4.jpg.png', alt: 'Testing and validation' },
+            { src: 'images/5.jpeg', alt: 'Testing' },
+            { src: 'images/6.jpeg', alt: 'Testing' },
+            { src: 'images/7.jpeg', alt: 'Testing' }
+            
+            
         ]
     },
     'swarm-drones': {
         title: 'Autonomous Swarm Drones for Light Show Application',
         images: [
-            { src: 'images/swarm-drones-1.jpg', alt: 'Swarm drone frame design' },
-            { src: 'images/swarm-drones-2.jpg', alt: 'Lightweight frame optimization' },
-            { src: 'images/swarm-drones-3.jpg', alt: 'Battery integration design' },
-            { src: 'images/swarm-drones-4.jpg', alt: 'Synchronization system' }
+            { src: 'images/Drone1.png', alt: 'Swarm drone frame design' },
+            { src: 'images/Drone2.png', alt: 'Lightweight frame optimization' },
+            { src: 'images/Drone3.png', alt: 'Battery integration design' },
+            { src: 'images/Drone4.png', alt: 'Synchronization system' }
         ]
     },
     'solar-car': {
         title: 'Solar Car – Braking & Wheel System Design',
         images: [
-            { src: 'images/solar-car-1.jpg', alt: 'Braking assembly design' },
-            { src: 'images/solar-car-2.jpg', alt: 'Wheel system integration' },
-            { src: 'images/solar-car-3.jpg', alt: 'Ansys analysis results' },
-            { src: 'images/solar-car-4.jpg', alt: 'Team Haya competition' }
+            { src: 'images/esvc1.jpeg', alt: 'Braking assembly design' },
+            { src: 'images/esvc2.png', alt: 'Wheel system integration' },
+            { src: 'images/esvc4.jpeg', alt: 'Ansys analysis results' },
+            { src: 'images/esvc6.jpeg', alt: 'Team Haya competition' },
+            { src: 'images/esvc7.jpeg', alt: 'Team Haya competition' },
+            { src: 'images/esvc8.jpeg', alt: 'Team Haya competition' },
+            { src: 'images/esvc9.jpeg', alt: 'Team Haya competition' }
         ]
     }
 };
