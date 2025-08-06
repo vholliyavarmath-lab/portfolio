@@ -324,4 +324,96 @@ scrollToTopBtn.addEventListener('mouseenter', () => {
 scrollToTopBtn.addEventListener('mouseleave', () => {
     scrollToTopBtn.style.transform = 'translateY(0)';
     scrollToTopBtn.style.boxShadow = '0 5px 15px rgba(37, 99, 235, 0.3)';
+});
+
+// Gallery Modal Functionality
+const galleryData = {
+    'drone-spraying': {
+        title: 'Vertical Aerial Spraying Mechanism for Drones',
+        images: [
+            { src: 'images/drone-spraying-1.jpg.png', alt: 'Drone spraying mechanism design' },
+            { src: 'images/drone-spraying-2.jpg.png', alt: '2-DOF pan-tilt system' },
+            { src: 'images/drone-spraying-3.jpg.png', alt: 'Motorized actuators integration' },
+            { src: 'images/drone-spraying-4.jpg.png', alt: 'Testing and validation' }
+        ]
+    },
+    'swarm-drones': {
+        title: 'Autonomous Swarm Drones for Light Show Application',
+        images: [
+            { src: 'images/swarm-drones-1.jpg', alt: 'Swarm drone frame design' },
+            { src: 'images/swarm-drones-2.jpg', alt: 'Lightweight frame optimization' },
+            { src: 'images/swarm-drones-3.jpg', alt: 'Battery integration design' },
+            { src: 'images/swarm-drones-4.jpg', alt: 'Synchronization system' }
+        ]
+    },
+    'solar-car': {
+        title: 'Solar Car – Braking & Wheel System Design',
+        images: [
+            { src: 'images/solar-car-1.jpg', alt: 'Braking assembly design' },
+            { src: 'images/solar-car-2.jpg', alt: 'Wheel system integration' },
+            { src: 'images/solar-car-3.jpg', alt: 'Ansys analysis results' },
+            { src: 'images/solar-car-4.jpg', alt: 'Team Haya competition' }
+        ]
+    }
+};
+
+function openGallery(projectId) {
+    const modal = document.getElementById('galleryModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const galleryContainer = document.getElementById('galleryContainer');
+    
+    const project = galleryData[projectId];
+    if (!project) return;
+    
+    // Set modal title
+    modalTitle.textContent = project.title;
+    
+    // Clear and populate gallery
+    galleryContainer.innerHTML = '';
+    project.images.forEach(image => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `
+            <img src="${image.src}" alt="${image.alt}" class="project-photo" loading="lazy">
+        `;
+        
+        // Add error handling for images
+        const img = galleryItem.querySelector('.project-photo');
+        img.onerror = function() {
+            this.style.display = 'none';
+            galleryItem.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #64748b; font-size: 0.9rem;">
+                    <i class="fas fa-image" style="margin-right: 8px;"></i>
+                    Image not available
+                </div>
+            `;
+        };
+        
+        galleryContainer.appendChild(galleryItem);
+    });
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeGallery() {
+    const modal = document.getElementById('galleryModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('galleryModal');
+    if (event.target === modal) {
+        closeGallery();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeGallery();
+    }
 }); 
